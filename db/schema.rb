@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 2021_12_20_224146) do
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
+<<<<<<< HEAD
     t.datetime "reset_password_sent_at", precision: 6
     t.datetime "remember_created_at", precision: 6
     t.datetime "created_at", precision: 6, null: false
@@ -39,6 +40,13 @@ ActiveRecord::Schema.define(version: 2021_12_20_224146) do
     t.string "firstname"
     t.string "backup_email"
     t.string "backup_phone"
+=======
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
+>>>>>>> 616b076 (add letters view)
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
