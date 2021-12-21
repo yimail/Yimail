@@ -46,7 +46,7 @@ class LettersController < ApplicationController
     @letter = current_user.letters.find(params[:id])
   end
   def letter_params
-    params.require(:letter).permit(:sender, :recipient, :subject, :content, :carbon_copy, :blind_carbon_copy, :uuid)
+    params.require(:letter).permit(:sender, :recipient, :subject, :content, :carbon_copy, :blind_carbon_copy)
   end
 
 end
