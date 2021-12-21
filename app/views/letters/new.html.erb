@@ -1,0 +1,31 @@
+<%= form_with(model: @letter) do |form| %>
+  <div class='fields'>
+    <%= form.label :recipient, '收件者' %> 
+    <%= form.text_field :recipient %> 
+  </div>
+
+  <div class='fields'>
+    <%= form.label :carbon_copy, '副本' %> 
+    <%= form.text_field :carbon_copy %> 
+  </div>
+
+  <div class='fields'>
+    <%= form.label :blind_carbon_copy, '密件副本' %> 
+    <%= form.text_field :blind_carbon_copy %> 
+  </div>
+
+  <div class='fields'>
+    <%= form.label :subject, '主旨' %> 
+    <%= form.text_field :subject %> 
+  </div>
+
+  <div class='fields'>
+    <%= form.label :content %> 
+    <%= form.rich_text_area :content %> 
+  </div>
+
+  <div class='action'>
+    <%= form.submit '傳送' %>
+  </div>
+
+<% end %>
