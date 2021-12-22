@@ -4,7 +4,7 @@ namespace :db do
     u = User.random
     10.times do |i|
       u.letters.create(sender: Faker::FunnyName.name,
-                       content: Faker::Lorem.sentences(number: 1),
+                       subject: Faker::Lorem.sentences(number: 1),
                        created_at: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now, format: :short))
     end
   end

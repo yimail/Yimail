@@ -220,11 +220,8 @@ DEPENDENCIES
   capybara
   debug
   devise (~> 4.2)
-<<<<<<< HEAD
   image_processing (~> 1.2)
-=======
   faker (~> 2.19)
->>>>>>> 69607a4 (feat:add fake email)
   importmap-rails
   jbuilder
   pg (~> 1.1)
