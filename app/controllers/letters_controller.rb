@@ -3,7 +3,8 @@ class LettersController < ApplicationController
   before_action :find_letter, only:[:edit, :update, :destroy]
 
   def index
-    @letters = Letter.all
+    # 避免Ｎ+1
+    @letters = Letter.with_rich_text_content
   end
 
   def new
@@ -47,4 +48,5 @@ class LettersController < ApplicationController
   def letter_params
     params.require(:letter).permit(:sender, :recipient, :subject, :content, :carbon_copy, :blind_carbon_copy)
   end
+
 end
