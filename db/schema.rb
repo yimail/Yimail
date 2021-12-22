@@ -63,6 +63,8 @@ ActiveRecord::Schema.define(version: 2021_12_21_075551) do
     t.string "blind_carbon_copy"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_letters_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
