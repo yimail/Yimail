@@ -4,7 +4,7 @@ class LettersController < ApplicationController
 
   def index
     # 避免Ｎ+1
-    @letters = Letter.all.with_rich_text_content
+    @letters = Letter.with_rich_text_content
   end
 
   def new
